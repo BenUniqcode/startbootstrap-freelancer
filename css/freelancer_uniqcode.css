@@ -1,10 +1,45 @@
-/* BW Need a different colour inside the About section because its background is that colour */
+/* Different header and about colour */
+header,
+#about,
+hr.star-light::after {
+  background-color: rgb(42,82,134);
+}
+#portfolio .portfolio-item .portfolio-link .caption {
+  background-color: rgba(42,82,134,0.8);
+  border-radius: 4px;
+}
+.navbar-custom .navbar-nav li a:hover {
+  color: rgb(82,142,234);
+}
+a, a.active, a:active, a:focus, a:hover {
+  color: rgb(82,142,234);
+}
+.navbar-custom .navbar-nav li.active a,
+.navbar-custom .navbar-nav li.active a:active, 
+.navbar-custom .navbar-nav li.active a:focus, 
+.navbar-custom .navbar-nav li.active a:hover {
+  background-color: rgb(42,82,134);
+}
+
+.btn-success {
+  background-color: rgb(42,82,134);
+  border-color: rgb(42,82,134);
+}
+
+/* Smaller text */
+p {
+  font-size: 18px;
+}
+
+
+/* BW Need a different colour inside the About section and footer because its background is dark */
 #about a,
 #about a:hover,
 #about a:focus,
 #about a:active,
-#about a.active {
-  color: #447ab7;
+#about a.active,
+footer a {
+  color: rgb(24,188,156);
 }
 /* BW But that breaks the appearance of this, so override this back again */
 #about .btn-outline {
@@ -15,3 +50,10 @@
   margin: 0 0 20px;
 }
 
+/* Don't uppercase the navbar or the headers */
+.navbar-custom,
+.navbar-custom .navbar-toggle,
+header .intro-text .name,
+h2 {
+  text-transform: none;
+}
