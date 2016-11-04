@@ -1,0 +1,17 @@
+/* BW Need a different colour inside the About section because its background is that colour */
+#about a,
+#about a:hover,
+#about a:focus,
+#about a:active,
+#about a.active {
+  color: #447ab7;
+}
+/* BW But that breaks the appearance of this, so override this back again */
+#about .btn-outline {
+  color: white;
+}
+/* Increase the para spacing in the about section */
+#about p {
+  margin: 0 0 20px;
+}
+
