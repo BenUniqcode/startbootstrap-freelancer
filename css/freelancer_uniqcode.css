@@ -1,8 +1,11 @@
 /* Different header and about colour */
-header,
 #about,
 hr.star-light::after {
   background-color: rgb(42,82,134);
+}
+header,
+header hr.star-light::after {
+  background-color: rgb(24,41,80);
 }
 #portfolio .portfolio-item .portfolio-link .caption {
   background-color: rgba(42,82,134,0.8);
