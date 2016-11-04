@@ -31,6 +31,15 @@ p {
   font-size: 18px;
 }
 
+/* Larger navbar */
+.navbar-right {
+  font-size: 16px;
+}
+
+/* Justify */
+#about p {
+  text-align: justify;
+}
 
 /* BW Need a different colour inside the About section and footer because its background is dark */
 #about a,
