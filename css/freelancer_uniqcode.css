@@ -69,3 +69,8 @@ header .intro-text .name,
 h2 {
   text-transform: none;
 }
+
+/* Cut the bottom padding */
+header .container {
+	padding-bottom: 40px;
+}
