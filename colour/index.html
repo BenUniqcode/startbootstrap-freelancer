@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CSS Experiment">
+    <meta name="author" content="Ben Wheeler">
+
+    <title>Colour Overload</title>
+
+    <link href="color.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet"> 
+</head>
+
+<body>
+  <p>Move your mouse.</p>
+</body>
+
+<script>
+  const docEl = document.documentElement;
+
+  var styleVar = function(property, value, element = docEl) {
+    element.style.setProperty(property, value);
+  };
+
+  var isfaded = false;
+  var fade = function() {
+    if (! isfaded) {
+      document.querySelector('p').classList.add('fade');
+    }
+    isfaded = true;
+  };
+  
+  docEl.addEventListener('mousemove', (event) => {
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    var scalex = Math.floor(event.clientX * 255 / width);
+    var scaley = Math.floor(event.clientY * 255 / height);
+    var fgr = scalex;
+    var fgg = 255 - scalex;
+    var fgb = scaley;
+    var bgr = 255 - scaley;
+    var bgg = scaley;
+    var bgb = scalex;
+    styleVar('--fgcol', 'rgb(' + fgr + ',' + fgg + ',' + fgb + ')');
+    styleVar('--bgcol', 'rgb(' + bgr + ',' + bgg + ',' + bgb + ')');
+  });
+</script>
+
+</html>
